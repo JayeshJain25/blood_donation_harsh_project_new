@@ -203,7 +203,7 @@ class _RequestBloodState extends State<RequestBlood> {
                         padding: const EdgeInsets.all(18.0),
                         child: TextFormField(
                           decoration: const InputDecoration(
-                            hintText: 'Quantity (ml)',
+                            hintText: '1 packet (300 ml)',
                             icon: Icon(
                               FontAwesomeIcons.prescriptionBottle,
                               color: Color.fromARGB(1000, 221, 46, 68),

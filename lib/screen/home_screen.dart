@@ -198,19 +198,19 @@ class _HomeScreenState extends State<HomeScreen> {
             //             builder: (context) => const CampaignsPage()));
             //   },
             // ),
-            ListTile(
-              title: const Text("Utility"),
-              leading: const Icon(
-                FontAwesomeIcons.plus,
-                color: Color.fromARGB(1000, 221, 46, 68),
-              ),
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const UtilityScreen()));
-              },
-            ),
+            // ListTile(
+            //   title: const Text("Utility"),
+            //   leading: const Icon(
+            //     FontAwesomeIcons.plus,
+            //     color: Color.fromARGB(1000, 221, 46, 68),
+            //   ),
+            //   onTap: () {
+            //     Navigator.push(
+            //         context,
+            //         MaterialPageRoute(
+            //             builder: (context) => const UtilityScreen()));
+            //   },
+            // ),
             ListTile(
               title: const Text("Ambulance Service"),
               leading: const Icon(
