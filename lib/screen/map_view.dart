@@ -247,61 +247,58 @@ class _MapViewState extends State<MapView> {
         ),
         Align(
           alignment: Alignment.bottomCenter,
-          child: Positioned.fill(
-            bottom: 50,
-            child: Row(
-              children: [
-                Container(
+          child: Row(
+            children: [
+              Container(
+                width: 180.0,
+                padding: const EdgeInsets.all(8.0),
+                child: FloatingActionButton.extended(
+                  heroTag: "btn1",
+                  backgroundColor: const Color.fromARGB(1000, 221, 46, 68),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BeADonor(),
+                      ),
+                    );
+                  },
+                  icon: const Icon(
+                    FontAwesomeIcons.burn,
+                    color: Colors.white,
+                  ),
+                  label: const Text(
+                    "Be a Donor",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
                   width: 180.0,
-                  padding: const EdgeInsets.all(8.0),
                   child: FloatingActionButton.extended(
-                    heroTag: "btn1",
+                    heroTag: "btn2",
                     backgroundColor: const Color.fromARGB(1000, 221, 46, 68),
                     onPressed: () {
                       Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const BeADonor(),
-                        ),
-                      );
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => RequestBlood(
+                                  position.latitude, position.longitude)));
                     },
                     icon: const Icon(
                       FontAwesomeIcons.burn,
                       color: Colors.white,
                     ),
                     label: const Text(
-                      "Be a Donor",
+                      "Request For Blood",
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: 180.0,
-                    child: FloatingActionButton.extended(
-                      heroTag: "btn2",
-                      backgroundColor: const Color.fromARGB(1000, 221, 46, 68),
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => RequestBlood(
-                                    position.latitude, position.longitude)));
-                      },
-                      icon: const Icon(
-                        FontAwesomeIcons.burn,
-                        color: Colors.white,
-                      ),
-                      label: const Text(
-                        "Request For Blood",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                  ),
-                )
-              ],
-            ),
+              )
+            ],
           ),
         ),
       ],
